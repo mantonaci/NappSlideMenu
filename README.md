@@ -253,6 +253,11 @@ window.open(); //open the app
 
 ## Changelog
 
+**v1.3.2**
+
+* Minor bugfix.
+* Downgraded to ViewDeck 2.2.11.
+
 **v1.3.1**  
 
 * Fix memory leak in ViewDeck when closing the NappSlideMenu. Thanks to @Michele 
