@@ -49,13 +49,15 @@ UINavigationController * NavigationControllerForViewProxy(TiUIiPhoneNavigationGr
 	{
                 
         // Check in centerWindow is a UINavigationController
-        BOOL useNavController = FALSE;
+        /*BOOL useNavController = FALSE;
         if([[[[self.proxy valueForUndefinedKey:@"centerWindow"] class] description] isEqualToString:@"TiUIiPhoneNavigationGroupProxy"]) {
             useNavController = TRUE;
         }
         
         // navController or TiWindow ?
-        UIViewController *centerWindow = useNavController ? NavigationControllerForViewProxy([self.proxy valueForUndefinedKey:@"centerWindow"]) : ControllerForViewProxy([self.proxy valueForUndefinedKey:@"centerWindow"]);
+        UIViewController *centerWindow = useNavController ? NavigationControllerForViewProxy([self.proxy valueForUndefinedKey:@"centerWindow"]) : ControllerForViewProxy([self.proxy valueForUndefinedKey:@"centerWindow"]);*/
+        
+        UIViewController *centerWindow = ControllerForViewProxy([self.proxy valueForUndefinedKey:@"centerWindow"]);
         
 		TiViewProxy *leftWindow = [self.proxy valueForUndefinedKey:@"leftWindow"];
         TiViewProxy *rightWindow = [self.proxy valueForUndefinedKey:@"rightWindow"];
